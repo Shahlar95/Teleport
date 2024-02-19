@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #175464;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+header .menu .container {
+  background-color: #175464;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+header .menu .container .btn-hamburger {
+  background-color: #a6bf42;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+header .menu .container .btn-hamburger .line1, header .menu .container .btn-hamburger .line2, header .menu .container .btn-hamburger .line3 {
+  background-color: rgba(0, 0, 0, 0.623);
+  width: 30px;
+  height: 3px;
+  margin: 3px 0;
+}
+header .menu .container .btn-hamburger.active .line1 {
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  top: 20%;
+  left: 48%;
+  transform: rotate(45deg);
+}
+header .menu .container .btn-hamburger.active .line2 {
+  position: absolute;
+  transform: rotate(45deg);
+}
+header .menu .container .btn-hamburger.active .line3 {
+  opacity: 0;
+  visibility: hidden;
+}
+header .mobile-menu {
+  transform: translateX(100%);
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.4s ease;
+  z-index: 2;
+}
+header .mobile-menu .container-fluid {
+  background-color: #175464;
+  height: 100vh;
+  width: 450px;
+}
+header .mobile-menu .container-fluid ul {
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+header .mobile-menu .container-fluid ul li {
+  background-color: #1e6273;
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+}
+header .mobile-menu .container-fluid ul li a {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7411764706);
+}
+header .mobile-menu .container-fluid ul li a i {
+  padding: 0 15px;
+}
+header .mobile-menu.show {
+  transform: translateX(0%);
+}
+
+.services .container {
+  max-width: 1440px;
+  margin: 10px auto;
+  padding: 20px 40px;
+}
+.services .container .box .inner {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 15px;
+}
+.services .container .box .inner .image {
+  width: 100%;
+  height: 100%;
+}
+.services .container .box .inner .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.services .container .box .inner .content {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 40px;
+  color: #fff;
+  transition: 0.5s ease;
+}
+.services .container .box .inner .content h2 a {
+  color: #fff;
+  font-size: 37px;
+  font-weight: bold;
+}
+.services .container .box .inner .content p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.services .container .box .inner .content-second {
+  width: 100%;
+  padding: 30px 40px;
+  position: absolute;
+  bottom: -250px;
+  left: 0;
+  transition: 0.5s ease;
+}
+.services .container .box .inner .content-second button {
+  border: none;
+  padding: 20px 40px;
+  background-color: #a6bf42;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 7px;
+}
+.services .container .box .inner .content-second button:hover {
+  background-color: #c0da5a;
+}
+.services .container .box .inner .content-second p {
+  margin: 50px 0;
+}
+.services .container .box .inner .content-second p a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+.services .container .box .inner .content-second p a:hover {
+  text-decoration: underline;
+}
+.services .container .box .inner::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: 0.5s linear;
+  background: linear-gradient(180deg, rgba(226, 226, 230, 0.301) 29%, #175564 100%, rgb(23, 85, 100) 100%, rgb(23, 85, 100) 100%);
+}
+.services .container .box .inner:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+}
+.services .container .box .inner:hover::before {
+  background: linear-gradient(180deg, rgba(226, 226, 230, 0.527) 0%, rgba(42, 142, 167, 0.0823529412) 0%, rgb(23, 85, 100) 100%, rgb(23, 85, 100) 50%);
+}
+.services .container .box .inner:hover .content {
+  bottom: 50%;
+}
+.services .container .box .inner:hover .content-second {
+  bottom: 0px;
+  left: 0;
+}/*# sourceMappingURL=style.css.map */
